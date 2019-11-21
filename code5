@@ -1,0 +1,16 @@
+#code5
+
+
+def ScoreFinder(a,b,c):
+    count = 0
+    C = c
+    A = [x.upper() for x in a]
+    c = c.upper()
+
+    for i in A:
+        if i == c:
+            print("OUTPUT", C, "scored", b[A.index(c)])
+            count = 1
+
+    if count == 0:
+        print("OUTPUT Could not find Player")
