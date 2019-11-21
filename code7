@@ -1,0 +1,14 @@
+code7
+
+
+def Intersection(a,b):
+    C = []
+    c = a + b
+    d = [c[i] for i in range(len(c)) if c[i] in c[:i]]
+
+    for i in d:
+        if i not in C:
+            C.append(i)
+    C.reverse()
+    
+    return PrintOutput(C)
