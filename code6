@@ -1,0 +1,10 @@
+code6
+
+
+def Union(a,b):
+    C = []
+    c = a + b
+    for i in c:
+        if i not in C:
+            C.append(i)
+    return PrintOutput(C)
