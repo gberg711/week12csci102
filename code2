@@ -1,0 +1,10 @@
+#code2
+
+def LoadFile(file):
+
+    with open((file), 'r') as f:
+        row = f.readlines()
+    rows = [row.rstrip('\n') for row in open(file)]
+    return PrintOutput(rows)
+
+LoadFile("accountsPrint.txt")
