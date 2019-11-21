@@ -1,0 +1,68 @@
+entire code
+
+#Garrett Berg
+#CSCI 102 section E
+#week 12 lab B
+
+
+
+players = ["Mary", "Cody", "Joe", "Jill", "Xai", "Bodo"]
+scores = [5, 8, 10, 6, 10, 4]
+players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
+
+def PrintOutput(string):
+    
+    print("OUTPUT", string)
+
+
+def LoadFile(file):
+
+    with open((file), 'r') as f:
+        row = f.readlines()
+    rows = [row.rstrip('\n') for row in open(file)]
+    return PrintOutput(rows)
+
+#LoadFile("accountsPrint.txt")
+
+def UpdateString(a,b,c):
+    output = (''.join((a[:c],b,a[(c+1):])))
+    print("OUTPUT", output)
+
+#UpdateString("Hello World", "a", 3)
+
+def FindWordCount(file, n):
+    count = 0
+
+    with open((file), 'r') as file:
+        for row in file:
+            for word in row.split():
+                if word == n:
+                    count = count + 1
+    return PrintOutput(count)
+
+#FindWordCount("accounts.txt", "Garrett")
+
+def ScoreFinder(a,b,c):
+    count = 0
+    C = c
+    A = [x.upper() for x in a]
+    c = c.upper()
+
+    for i in A:
+        if i == c:
+            print("OUTPUT", C, "scored", b[A.index(c)])
+            count = 1
+
+    if count == 0:
+        print("OUTPUT Could not find Player")
+
+#ScoreFinder(players, scores, "jill")
+#ScoreFinder(players, scores, "Manuel")
+
+def Union(a,b):
+    C = []
+    c = a + b
+    for i in c:
+        if i not in C:
+            C.append(i)
+    return PrintOutput(C)
