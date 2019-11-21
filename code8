@@ -1,0 +1,9 @@
+code8
+
+
+def NotIn(a,b):
+    C = []
+    for i in a:
+        if i not in b:
+            C.append(i)
+    return PrintOutput(C)
