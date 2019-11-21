@@ -1,0 +1,12 @@
+#code4
+
+
+def FindWordCount(file, n):
+    count = 0
+
+    with open((file), 'r') as file:
+        for row in file:
+            for word in row.split():
+                if word == n:
+                    count = count + 1
+    return PrintOutput(count)
